@@ -40,6 +40,8 @@ The purpose of this lab is to detect each different Nut and Bolt by Image Proces
 
 The overview of this project is the same as the below Figure 1. It is a summarization of all processes.
 
+![https://github.com/eunjijuliako/DLIP/blob/639067feb909799f81072691c017f5310bdc0a5f/lab/lab1/images/diagram.png](https://github.com/eunjijuliako/DLIP/blob/639067feb909799f81072691c017f5310bdc0a5f/lab/lab1/images/diagram.png)
+
 ![Figure1. Overview Diagram](LAB%20Grayscale%20Image%20Segmentation%20004c3d31f2a846a3aa61b686be7aa3e9/KakaoTalk_Photo_2024-03-30-21-20-26_001.png)
 
 Figure1. Overview Diagram
