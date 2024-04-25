@@ -56,99 +56,82 @@ To find the sizes of a 3D rectangular object, below are the conditions for the a
 
 **Flow charts for Method 1 and 2**
 ![overview_method1](https://github.com/eunjijuliako/DLIP/assets/164735460/5eeace7b-7e85-4e69-8f7b-e098fbffe130)
-
 Figure1. Overview Flow chart for method 1
 
-[Figure2. Overview Flow chart for method 2](https://github.com/eunjijuliako/DLIP/assets/164735460/81d6c252-fde9-428c-b9ac-eea18358caef)
-
+![overview_method2](https://github.com/eunjijuliako/DLIP/assets/164735460/b0fda033-0f4b-4a67-a031-cb2d134c9fd1)
 Figure2. Overview Flow chart for method 2
 
 ## 2. Procedure
 
 ### **Method 1: Size Detection with Manual Corner Matching**
 
-[Figure 3. A user enters the Real Reference Width, 50 mm](https://github.com/eunjijuliako/DLIP/assets/164735460/9f0559c2-d696-4eed-9f06-db91b35840c1)
-
+![1](https://github.com/eunjijuliako/DLIP/assets/164735460/db465696-3ade-47c5-a8d8-c6c1adb4073f)
 Figure 3. A user enters the Real Reference Width, 50 mm
 
 After reading the camera parameters from the calibrated XML file, a user should input the real reference width of a reference rectangular. 
 
-[Figure 4. WL_Reference size capture](https://github.com/eunjijuliako/DLIP/assets/164735460/50c188a4-9497-4059-a1ba-8498bccd6caa)
-
+![2](https://github.com/eunjijuliako/DLIP/assets/164735460/b347cf92-571e-41e0-a358-cb79d856e588)
 Figure 4. WL_Reference size capture
 
-[Figure 5. WL_Calculated Reference size](https://github.com/eunjijuliako/DLIP/assets/164735460/e0ffa4c7-5a2c-4303-8d80-6a77d8b9ed0a)
 
+![3](https://github.com/eunjijuliako/DLIP/assets/164735460/df8cbcdb-a45b-45f4-961d-680c7cb06719)
 Figure 5. WL_Calculated Reference size
 
 This picture was taken along the Z-axis to get the length of the object. If the user presses ‘s’ or ‘S’, the algorithm recognizes the current pixel width as a reference pixel width. With the reference real and pixel width, the ratio represents the relationship between pixel and [mm] conversion will be calculated. 
 
-[Figure 6. WL_Retangular Object](https://github.com/eunjijuliako/DLIP/assets/164735460/67775e94-8a95-47b9-91e5-a317fe5fb767)
-
+![4](https://github.com/eunjijuliako/DLIP/assets/164735460/f1a7714f-1dd6-47e6-b171-4ff6f16bbbdf)
 Figure 6. WL_Retangular Object
 
-[Figure 7. WL_Calcuated Length](https://github.com/eunjijuliako/DLIP/assets/164735460/8d7be876-bffd-4e7c-bc74-d50a5de248c6)
-
+![5](https://github.com/eunjijuliako/DLIP/assets/164735460/079937ad-1677-428d-9021-ee40f1bc2ff3)
 Figure 7. WL_Calcuated Length
 
 With the ratio, the target object’s calculated real width and length will be calculated. In figure 6, The target object’s real width is 100 mm and length is 99 [mm]. 
 
-[Figure 8. WH_Reference Pixel Width](https://github.com/eunjijuliako/DLIP/assets/164735460/c59fd462-5d0a-4204-b60b-be12cb1eb59b)
-
+![6](https://github.com/eunjijuliako/DLIP/assets/164735460/97d8726b-28c1-4706-803b-3608d67b76a9)
 Figure 8. WH_Reference Pixel Width
 
-[Figure 9. WH_Ratio and Calculated Length](https://github.com/eunjijuliako/DLIP/assets/164735460/5bfdfcb0-eb3f-4e87-a261-5b58bf226d3e)
-
+![7](https://github.com/eunjijuliako/DLIP/assets/164735460/464b86e3-775f-4dcd-b4a0-12be6721fd06)
 Figure 9. WH_Ratio and Calculated Length
 
 This picture was taken with the sides(ZX, ZY) to get the height of the rectangular. The pixel width of the reference rectangular is calculated in the same way. After calculating the ratio with the real reference width of 50 mm, the real height of the reference rectangular is calculated which is 49 mm.
 
-[Figure 10. WH_Retangular Object](https://github.com/eunjijuliako/DLIP/assets/164735460/356bf5ff-af04-4a37-938b-c7131327ce73)
-
+![8](https://github.com/eunjijuliako/DLIP/assets/164735460/4a94af09-b9d1-4ff2-a44c-de08d87c49b9)
 Figure 10. WH_Retangular Object
 
-[Figure 11. WH_Calcuated Height](https://github.com/eunjijuliako/DLIP/assets/164735460/07e16340-d619-4fb4-a2f0-73b7de00e4c6)
-
+![9](https://github.com/eunjijuliako/DLIP/assets/164735460/18ed0a46-0e91-40e8-94ed-ca3072fefcf8)
 Figure 11. WH_Calcuated Height
 
 With the ratio, the real width of the target rectangular is calculated which is 101 and it’s height is 51 mm.
 
-[Figure 12. Distorted_Reference Pixel Width](https://github.com/eunjijuliako/DLIP/assets/164735460/3cff348e-e23a-42e0-8664-e7ea72c2a710)
-
+![10](https://github.com/eunjijuliako/DLIP/assets/164735460/9fcc363a-32f1-463c-a0d3-50e1cdfd842f)
 Figure 12. Distorted_Reference Pixel Width
 
-[Figure 13. Distorted_Ratio and Calculated Length](https://github.com/eunjijuliako/DLIP/assets/164735460/5555baa1-cdd3-4e2e-bfd6-d05810a70cb3)
-
+![11](https://github.com/eunjijuliako/DLIP/assets/164735460/addb869d-cc18-4a53-a26b-c1b1afc3e1a5)
 Figure 13. Distorted_Ratio and Calculated Length
 
 We tested this algorithm with the distorted image. The width of the reference rectangular is 50 mm, and the calculated length is 50 mm. However, the recognized length is 44 mm. This result doesn’t satisfy the accuracy requirement because the error is more than 3mm.
 
-[Figure 14. Distorted_Retangular Object](https://github.com/eunjijuliako/DLIP/assets/164735460/cb711099-7d35-40aa-a8dc-f9e54c393d01)
-
+![12](https://github.com/eunjijuliako/DLIP/assets/164735460/37de3f36-3b1b-4ed1-ac39-ea3765aa0dca)
 Figure 14. Distorted_Retangular Object
 
-[Figure 15. Distorted_Calcuated Height](https://github.com/eunjijuliako/DLIP/assets/164735460/c42a0295-e28a-4a0f-9786-62c52d7be540)
-
+![13](https://github.com/eunjijuliako/DLIP/assets/164735460/a0f4b3b5-adb6-4d6d-8082-a66a95d0f691)
 Figure 15. Distorted_Calcuated Height
 
 Also, the error of the target object’s size is more than 3mm which is 86 mm in width and 72 mm in length when the true value is 100mm each. 
 
 ### **Method 2: Size Detection with Frontal Photo**
 
-[Figure 16. (left)WL, (right)WH](https://github.com/12-dimension-cat/neko/assets/144550430/a3f3faf2-a635-4b05-a23c-0be519b5f320)
-
+![14](https://github.com/eunjijuliako/DLIP/assets/164735460/55be14ff-1820-45ee-849a-b204190f0267)
 Figure 16. (left)WL, (right)WH
 
 The picture was the same as the Figure 3,5,7,9, and it was taken on the same line with the object.
 
-[Figure 17. Morphology applied (left)WL, (right)WH](https://github.com/12-dimension-cat/neko/assets/144550430/cfa68d6e-7c9b-4f84-b5cf-82f461976ca1)
-
+![15](https://github.com/eunjijuliako/DLIP/assets/164735460/b3d194b1-841c-457e-96f4-0a4f797d632e)
 Figure 17. Morphology applied (left)WL, (right)WH
 
 We applied morphology to obtain the lines of the photos for calculating real width, length, and height.
 
-[Figure 18. Enter the reference width](https://github.com/12-dimension-cat/neko/assets/144550430/7e2a6e40-6c1c-4c1f-968a-b01773178d6c)
-
+![16](https://github.com/eunjijuliako/DLIP/assets/164735460/ce91cab9-82a0-49c2-8b9d-be049b7b260d)
 Figure 18. Enter the reference width
 
 The width of the reference object is inputted from the user.
@@ -170,8 +153,7 @@ findContours(src_gray, contours, RETR_EXTERNAL, CHAIN_APPROX_SIMPLE);
  double firstObjectRealWidth = boundingBoxes[0].width * Ratio;             // Calculate the dimensions of the first object
 ```
 
-[Figure 19. Calculated (left)WL, (right)WH](https://github.com/12-dimension-cat/neko/assets/144550430/f2dc9f98-507a-4efd-9a9b-77de6ffe025c)
-
+![17](https://github.com/eunjijuliako/DLIP/assets/164735460/372a94f6-5510-494a-b55d-d0bd33fa38b1)
 Figure 19. Calculated (left)WL, (right)WH
 
 The ratio is calculated based on the width of the input reference object to output W, L, and H of each object.
