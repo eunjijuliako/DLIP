@@ -83,6 +83,7 @@ This picture was taken along the Z-axis to get the length of the object. If the 
 Figure 6. WL_Retangular Object
 
 ![5](https://github.com/eunjijuliako/DLIP/assets/164735460/079937ad-1677-428d-9021-ee40f1bc2ff3)
+
 Figure 7. WL_Calcuated Length
 
 With the ratio, the target object’s calculated real width and length will be calculated. In figure 6, The target object’s real width is 100 mm and length is 99 [mm]. 
@@ -91,6 +92,7 @@ With the ratio, the target object’s calculated real width and length will be c
 Figure 8. WH_Reference Pixel Width
 
 ![7](https://github.com/eunjijuliako/DLIP/assets/164735460/464b86e3-775f-4dcd-b4a0-12be6721fd06)
+
 Figure 9. WH_Ratio and Calculated Length
 
 This picture was taken with the sides(ZX, ZY) to get the height of the rectangular. The pixel width of the reference rectangular is calculated in the same way. After calculating the ratio with the real reference width of 50 mm, the real height of the reference rectangular is calculated which is 49 mm.
@@ -107,6 +109,7 @@ With the ratio, the real width of the target rectangular is calculated which is 
 Figure 12. Distorted_Reference Pixel Width
 
 ![11](https://github.com/eunjijuliako/DLIP/assets/164735460/addb869d-cc18-4a53-a26b-c1b1afc3e1a5)
+
 Figure 13. Distorted_Ratio and Calculated Length
 
 We tested this algorithm with the distorted image. The width of the reference rectangular is 50 mm, and the calculated length is 50 mm. However, the recognized length is 44 mm. This result doesn’t satisfy the accuracy requirement because the error is more than 3mm.
@@ -115,6 +118,7 @@ We tested this algorithm with the distorted image. The width of the reference re
 Figure 14. Distorted_Retangular Object
 
 ![13](https://github.com/eunjijuliako/DLIP/assets/164735460/a0f4b3b5-adb6-4d6d-8082-a66a95d0f691)
+
 Figure 15. Distorted_Calcuated Height
 
 Also, the error of the target object’s size is more than 3mm which is 86 mm in width and 72 mm in length when the true value is 100mm each. 
