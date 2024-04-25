@@ -1,0 +1,337 @@
+<?xml version="1.0" standalone="yes"?>
+<CalibrationProject>
+  <xs:schema id="CalibrationProject" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="CalibrationProject" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="data">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ObjWidth" type="xs:int" minOccurs="0" />
+                <xs:element name="ObjHeight" type="xs:int" minOccurs="0" />
+                <xs:element name="FieldSize" type="xs:double" minOccurs="0" />
+                <xs:element name="DetectionMethod" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="images">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ImagePath" type="xs:string" minOccurs="0" />
+                <xs:element name="SourceType" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="results">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="ImageCount" type="xs:int" minOccurs="0" />
+                <xs:element name="focus_lenX" type="xs:double" minOccurs="0" />
+                <xs:element name="focus_lenY" type="xs:double" minOccurs="0" />
+                <xs:element name="PrincipalX" type="xs:double" minOccurs="0" />
+                <xs:element name="PrincipalY" type="xs:double" minOccurs="0" />
+                <xs:element name="Dist1" type="xs:double" minOccurs="0" />
+                <xs:element name="Dist2" type="xs:double" minOccurs="0" />
+                <xs:element name="Dist3" type="xs:double" minOccurs="0" />
+                <xs:element name="Dist4" type="xs:double" minOccurs="0" />
+                <xs:element name="focus_lenX_er" type="xs:double" minOccurs="0" />
+                <xs:element name="focus_lenY_er" type="xs:double" minOccurs="0" />
+                <xs:element name="PrincipalX_er" type="xs:double" minOccurs="0" />
+                <xs:element name="PrincipalY_er" type="xs:double" minOccurs="0" />
+                <xs:element name="Dist1_er" type="xs:double" minOccurs="0" />
+                <xs:element name="Dist2_er" type="xs:double" minOccurs="0" />
+                <xs:element name="Dist3_er" type="xs:double" minOccurs="0" />
+                <xs:element name="Dist4_er" type="xs:double" minOccurs="0" />
+                <xs:element name="dc_AllImage_errX" type="xs:double" minOccurs="0" />
+                <xs:element name="dc_AllImage_errY" type="xs:double" minOccurs="0" />
+                <xs:element name="Calib_Date" type="xs:string" minOccurs="0" />
+                <xs:element name="Calib_Type" type="xs:int" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <data>
+    <ObjWidth>7</ObjWidth>
+    <ObjHeight>10</ObjHeight>
+    <FieldSize>20</FieldSize>
+    <DetectionMethod>3</DetectionMethod>
+  </data>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240410_121942825_03.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240410_121942825_04.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240410_121942825_06.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240410_121942825_07.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_01.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_02.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_03.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_04.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_05.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_06.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_07.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_08.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_09.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_10.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_11.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_12.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_13.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_14.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_15.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_16.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_17.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_18.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_19.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_20.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_21.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_22.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_23.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_24.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_25.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_26.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_27.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_28.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_132056195_29.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_01.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_02.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_03.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_04.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_05.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_06.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_07.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_08.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_09.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_10.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_11.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_12.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_13.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_14.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_15.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_16.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_17.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_18.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_19.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_20.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_21.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_22.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_23.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_24.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_25.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_26.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_27.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <images>
+    <ImagePath>C:\Users\moonh\source\repos\DLIP\calebration\KakaoTalk_20240412_133037285_28.jpg</ImagePath>
+    <SourceType>0</SourceType>
+  </images>
+  <results>
+    <ImageCount>63</ImageCount>
+    <focus_lenX>2760.0668785319322</focus_lenX>
+    <focus_lenY>2773.0501689726748</focus_lenY>
+    <PrincipalX>2020.7129429570289</PrincipalX>
+    <PrincipalY>1480.5845739978092</PrincipalY>
+    <Dist1>0.042230076914661165</Dist1>
+    <Dist2>-0.054138444736538442</Dist2>
+    <Dist3>-0.0012933216712170967</Dist3>
+    <Dist4>0.0021943490893893973</Dist4>
+    <focus_lenX_er>2.6281664371490479</focus_lenX_er>
+    <focus_lenY_er>2.579885721206665</focus_lenY_er>
+    <PrincipalX_er>4.3983464241027832</PrincipalX_er>
+    <PrincipalY_er>3.4447638988494873</PrincipalY_er>
+    <Dist1_er>0.002785644493997097</Dist1_er>
+    <Dist2_er>0.0090508889406919479</Dist2_er>
+    <Dist3_er>0.00040440273005515337</Dist3_er>
+    <Dist4_er>0.00050658197142183781</Dist4_er>
+    <dc_AllImage_errX>1.5816448444567208</dc_AllImage_errX>
+    <dc_AllImage_errY>1.5277349305398476</dc_AllImage_errY>
+    <Calib_Date>2024-04-12 오후 1:34:08</Calib_Date>
+    <Calib_Type>2</Calib_Type>
+  </results>
+</CalibrationProject>
