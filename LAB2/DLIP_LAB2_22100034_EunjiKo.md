@@ -55,8 +55,7 @@ To find the sizes of a 3D rectangular object, below are the conditions for the a
 ## 1. Overview
 
 **Flow charts for Method 1 and 2**
-
-[Figure1. Overview Flow chart for method 1](https://github.com/eunjijuliako/DLIP/assets/164735460/d931e23f-42e5-4252-9529-36ab75f81e8c)
+![overview_method1](https://github.com/eunjijuliako/DLIP/assets/164735460/5eeace7b-7e85-4e69-8f7b-e098fbffe130)
 
 Figure1. Overview Flow chart for method 1
 
