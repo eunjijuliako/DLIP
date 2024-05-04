@@ -12,7 +12,7 @@
 
 # Introduction
 
-[Figure 1. Given Final Result](https://github.com/eunjijuliako/DLIP/assets/164735460/551cafdb-da7f-4730-8738-bd21d3832f9f)
+![introduction](https://github.com/eunjijuliako/DLIP/assets/164735460/b3863dca-204f-402d-9c13-76e20e370124)
 
 Figure 1. Given Final Result
 
@@ -56,7 +56,7 @@ The edge of a copper plate was approximated to a quadratic function with a mathe
 
 **Flow chart**
 
-[Figure 2. Overview Flow Chart](https://github.com/eunjijuliako/DLIP/assets/164735460/612fcb45-9f82-4d7b-b468-a9a16b617cea)
+![Overview](https://github.com/eunjijuliako/DLIP/assets/164735460/0b285a1f-5770-4c10-adad-446513f5be34)
 
 Figure 2. Overview Flow Chart
 
@@ -66,7 +66,7 @@ First, when we load the image, with the gray-scaled image, the color will be spl
 
 ### Load the Source Image
 
-[Figure 3. Source Image](https://github.com/eunjijuliako/DLIP/assets/164735460/590855c5-f776-47bc-85a6-42d4e485c433)
+![source](https://github.com/eunjijuliako/DLIP/assets/164735460/1202cc02-1b63-494a-a452-86de8741de5b)
 
 Figure 3. Source Image
 
@@ -74,7 +74,7 @@ Figure 3. Source Image
 
 - Median Filter
 
-[Figure 4. Median Filter](https://github.com/eunjijuliako/DLIP/assets/164735460/91faf39f-f41e-4ead-8887-6c587c104c5f)
+![median](https://github.com/eunjijuliako/DLIP/assets/164735460/3d2ec970-93ac-4f66-b35d-f357dd926ac6)
 
 Figure 4. Median Filter
 
@@ -82,7 +82,7 @@ I removed the salt and pepper noise with the median filter.
 
 - Gray-Scale
 
-[Figure 5. Gray Scale](https://github.com/eunjijuliako/DLIP/assets/164735460/b5cacffa-3d05-412d-8af8-7e522f448b8c)
+![gray](https://github.com/eunjijuliako/DLIP/assets/164735460/939a6d9a-55da-4eca-8730-bd7a81fddb77)
 
 Figure 5. Gray Scale
 
@@ -90,15 +90,15 @@ To split the image, the source image should be gray-scaled.
 
 - Split
 
-[Figure 6. Split the Image to Blue](https://github.com/eunjijuliako/DLIP/assets/164735460/57ab746e-6e53-45fd-a21b-d1ccc7ee9d94)
+![blue](https://github.com/eunjijuliako/DLIP/assets/164735460/2acc5a62-780b-4f0f-9f50-e2d472d0faf0)
 
 Figure 6. Split the Image to Blue
 
-[Figure 7. Split the Image to Green](https://github.com/eunjijuliako/DLIP/assets/164735460/3eb0c3a6-9e9f-409a-ab70-346f2826535c)
+![green](https://github.com/eunjijuliako/DLIP/assets/164735460/0e24ba27-f177-43ec-bff5-47878b44bb5b)
 
 Figure 7. Split the Image to Green
 
-[Figure 8. Split the Image to Red](https://github.com/eunjijuliako/DLIP/assets/164735460/cb447bb6-82b3-4227-b7bd-64656b3cddee)
+![red](https://github.com/eunjijuliako/DLIP/assets/164735460/8aa45107-3eca-42c3-9ce9-215568a41813)
 
 Figure 8. Split the Image to Red
 
@@ -106,7 +106,7 @@ Because of the most color of the source image is red, it is easier to see the co
 
 - ROI
 
-[Figure 9. ROI](https://github.com/eunjijuliako/DLIP/assets/164735460/7ab5c746-bc45-43b2-8db5-36a636bfb860)
+![ROI](https://github.com/eunjijuliako/DLIP/assets/164735460/35ffdd2b-3af4-4fa7-b1d8-7979123d159e)
 
 Figure 9. ROI
 
@@ -122,7 +122,7 @@ ROI_h = 600
 
 - Threshold
 
-[Figure 10. Threshold](https://github.com/eunjijuliako/DLIP/assets/164735460/6575b421-8318-4091-8118-8108393d2f23)
+![threshold](https://github.com/eunjijuliako/DLIP/assets/164735460/6ac15ea0-9244-4cdf-923f-5998a0141096)
 
 Figure 10. Threshold
 
@@ -140,7 +140,7 @@ cv.imshow('5. Threshold', thres)
 
 - Edge Detection
 
-[Figure 11. Edge Detection, Canny](https://github.com/eunjijuliako/DLIP/assets/164735460/f4d26a75-4404-4021-92dd-fdc8546a1d54)
+![canny](https://github.com/eunjijuliako/DLIP/assets/164735460/5b792b5b-bdad-4b79-ad85-4f64a3bdf20e)
 
 Figure 11. Edge Detection, Canny
 
@@ -179,7 +179,7 @@ x, y, w, h = cv.boundingRect(contour)
 
 Then, the (x,y) coordinate of the line will be the (x,y) dataset of the regression for making the quadratic function. 
 
-[Figure 12. Regression on the ROI Grid](https://github.com/eunjijuliako/DLIP/assets/164735460/d025d7d1-59d0-48b8-a32d-38de170c87ab)
+![Regression on ROI](https://github.com/eunjijuliako/DLIP/assets/164735460/46420feb-b7b2-404f-87e1-eb717619b679)
 
 Figure 12. Regression on the ROI Grid
 
@@ -255,31 +255,32 @@ It draws the line on the image. ‘isClosed=False’ means that this function dr
 
 ### Level 1
 
-[Figure 13. Result of Level 1](https://github.com/eunjijuliako/DLIP/assets/164735460/be6c00ee-2db5-410d-ab4e-2ea3d25d4a58)
+![result_lev1](https://github.com/eunjijuliako/DLIP/assets/164735460/a8ff2541-ad9e-4752-96fc-30cce5782cc7)
 
 Figure 13. Result of Level 1
 
-[Figure 14. Result of Level 1 and it’s score](https://github.com/eunjijuliako/DLIP/assets/164735460/b579d2f0-e8dc-4ae3-8e87-abdd928d091c)
+
+![result_lev1_values](https://github.com/eunjijuliako/DLIP/assets/164735460/cbdb5d55-d2f8-44d1-b078-2a0c99b25413)
 
 Figure 14. Result of Level 1 and it’s score
 
 ### Level 2
 
-[Figure 15. Result of Level 2](https://github.com/eunjijuliako/DLIP/assets/164735460/4095bdd6-8bcd-46c2-b02a-b85cdf4eadd3)
+![result_lev2](https://github.com/eunjijuliako/DLIP/assets/164735460/e9884f35-2a0f-4279-b26a-7baad4d8258c)
 
 Figure 15. Result of Level 2
 
-[Figure 16. Result of Level 2 and it’s score](https://github.com/eunjijuliako/DLIP/assets/164735460/f9c56c8f-7ce5-4810-b23d-9a9d6be50841)
+![result_lev2_values](https://github.com/eunjijuliako/DLIP/assets/164735460/46523510-9ae7-4fb2-afe8-4ccc09187e3a)
 
 Figure 16. Result of Level 2 and it’s score
 
 ### Level 3
 
-[Figure 17. Result of Level 3](https://github.com/eunjijuliako/DLIP/assets/164735460/b71a84c6-fbe2-4180-ae3c-e02432f8a460)
+![result_lev3](https://github.com/eunjijuliako/DLIP/assets/164735460/93ccdfe6-452a-4948-8820-305cc4da2a28)
 
 Figure 17. Result of Level 3
 
-[Figure 18. Result of Level 3 and it’s score](https://github.com/eunjijuliako/DLIP/assets/164735460/c2c98453-b035-48ef-a3c4-ed7e7bb495c8)
+![result_lev3_values](https://github.com/eunjijuliako/DLIP/assets/164735460/2e51958b-7960-451d-873b-17730910137c)
 
 Figure 18. Result of Level 3 and it’s score
 
@@ -297,7 +298,7 @@ The level is determined as the length of the y of the approximated quadratic fun
 
 # Conclusion
 
- Thogh the lab, with the given three photos of copper plates, we could able to determine the y-position of the curvature vertex. The algorithm involved two important processes. Firstly, pre-processing was necessary to handle the noise and other objects in the source image. This involved carefully selecting an appropriate thresholding value and finding the ROI. All of the thresholding values were applied to all cases. Secondly, finding the approximate quadratic function was important for generating the dataset. I used 'polyfit' and created 'draw_quadratic_function' to find the coefficient of the quadratic function and the curve.
+ Through the lab, with the given three photos of copper plates, we were able to determine the y-position of the curvature vertex. The algorithm involved two important processes. Firstly, pre-processing was necessary to handle the noise and other objects in the source image. This involved carefully selecting an appropriate thresholding value and finding the ROI. All of the thresholding values were applied to all cases. Secondly, finding the approximate quadratic function was important for generating the dataset. I used 'polyfit' and created 'draw_quadratic_function' to find the coefficient of the quadratic function and the curve.
 
 In conclusion, the algorithm was successful in finding the y maximum value, level, and score of the copper plates. However, it can only find second-order equations. To allow the algorithm to find all types of polynomials, it would need to be adapted to handle N-order equations in the future.
 
