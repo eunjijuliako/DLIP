@@ -339,9 +339,9 @@ def draw_quadratic_function(image, a, b, c, x_offset, y_offset, color, thickness
 #  -------------------------- 1. Load the Image -------------------------------------
 
 # Read Image
-src = cv.imread('../../Challenging_Dataset/LV1.png')
-#src = cv.imread('../../Challenging_Dataset/LV2.png')
-#src = cv.imread('../../Challenging_Dataset/LV3.png')
+src = cv.imread('../Lab Report/Images/LV1.png')
+#src = cv.imread('../Lab Report/Images/LV2.png')
+#src = cv.imread('../Lab Report/Images/LV3.png')
 cv.namedWindow('1. source', cv.WINDOW_NORMAL)
 cv.imshow('1. source', src) 
 
