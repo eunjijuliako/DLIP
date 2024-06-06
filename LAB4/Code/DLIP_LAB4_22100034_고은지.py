@@ -10,10 +10,10 @@ from ultralytics import YOLO
 import numpy as np
 import matplotlib.pyplot as plt
 
-plt.ioff()  
+#plt.ioff()  
 
 # Load the YOLOv8 model
-model = YOLO('yolov8n.pt')
+model = YOLO('yolov8s.pt')
 
 # Open the video file
 video_path = 'Code/DLIP_parking_test_video.mp4'
@@ -22,6 +22,7 @@ cap = cv.VideoCapture(video_path)
 # If not success, exit the program
 if not cap.isOpened():
     print('Cannot open video')
+    exit()
 
 # Define ROI coordinates and size
 x, y, width, height = 0, 240, 1280, 180
@@ -71,7 +72,7 @@ def calculate_iou(box1, box2):
 
     union_area = box1_area + box2_area - inter_area
 
-    iou = inter_area / union_area
+    iou = inter_area / union_area -10
     return iou
 
 # draw the cars
@@ -81,13 +82,15 @@ def drawcar(frame, results):
 
     for result in results:
         for box in result.boxes:
+            print(box.cls)
             if (int(box.cls) in [2.0, 5.0, 7.0]):
                 x1, y1, x2, y2 = map(int, box.xyxy[0])
 
                 is_duplicate = False
                 for drawn_box in drawn_boxes:
                     iou = calculate_iou((x1, y1, x2, y2), drawn_box)
-                    if iou > 0.2:           # if IoU is more than 0.2, duplicated
+                    #print(iou)
+                    if iou > 0.3:  # if IoU is more than 0.2, duplicated
                         is_duplicate = True
                         break
 
@@ -96,6 +99,9 @@ def drawcar(frame, results):
                     cv.rectangle(frame, (x1, y1 + y), (x2, y2 + y), (0, 0, 255), 2)
                     cv.putText(frame, 'car', (x1, y1 + y - 10), cv.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2)
                     drawn_boxes.append((x1, y1, x2, y2))
+
+        if carnum >14: carnum = 13
+        print(carnum)
 
     return carnum
 
@@ -118,33 +124,38 @@ with open("counting_result.txt", "w") as f:
     # Loop through the video frames
     while cap.isOpened():
         success, frame = cap.read()
+        if not success:
+            break
+        
         count = 0
-        if success:
-            frame_height, frame_width, channels = frame.shape
-            roi = frame[y:y+height, x:x+width]
-            results = model(roi)
-            boxes = results[0].boxes
+        frame_height, frame_width, channels = frame.shape
+        roi = frame[y:y+height, x:x+width]
+        results = model(roi)
+        boxes = results[0].boxes
 
-            carnum = drawcar(frame, results) # the number of cars
-            PA = ParkingSpace(results, PP)   # information of available parking spaces
+        carnum = drawcar(frame, results)  # the number of cars
+        
+        #print(carnum)
+        PA = ParkingSpace(results, PP)    # information of available parking spaces
 
-            for i in range(13):
-                if PA[i] == 0:               # if there is no cars in the each parking space
-                    count += 1               # avavilable parking space += 1
-            
-            # Print count & carnum
-            cv.putText(frame, f'Available Parking: {count}', (900, 50), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-            cv.putText(frame, f'Number of Car: {carnum}', (900, 100), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+        for i in range(13):
+            if PA[i] == 0:  # if there is no car in the each parking space
+                count += 1  # available parking space += 1
 
-            # save the frame number and count to text file
-            f.write(f'{frame_number},{count}\n')
+        # Print count & carnum
+        
 
-            frame_number += 1
+        cv.putText(frame, f'Available Parking: {count}', (900, 50), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
+        cv.putText(frame, f'Number of Car: {13-count}', (900, 100), cv.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-            cv.imshow("Result", frame)
-            if cv.waitKey(1) & 0xFF == ord("q"):
-                break
-        else:
+        # Save the frame number and count to text file
+        f.write(f'{frame_number},{13-count}\n')
+
+
+        frame_number += 1
+
+        cv.imshow("Result", frame)
+        if cv.waitKey(1) & 0xFF == ord("q"):
             break
 
 cap.release()
