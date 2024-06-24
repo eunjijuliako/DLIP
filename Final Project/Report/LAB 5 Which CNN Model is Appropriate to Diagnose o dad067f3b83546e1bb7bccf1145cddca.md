@@ -23,26 +23,26 @@
 ## Background and Problem Statement
 
  This final project aims to implement a purposeful algorithm with images using deep learning and image processing. Through this project, we wanted to know how to use image processing as a medical technology for medical diagnosis and analysis. Therefore, we focused on breast cancer problems and deep-learning CNN models.
-First, breast cancer in Korea is the most common cancer among women, and the number of breast cancer patients has more than doubled over the past decade. It is among the highest incidence groups among Asian countries. Therefore, the importance of diagnosing and treating breast cancer is increasing. Second, there are many kinds of CNN models, but studies on which models are suitable for medical imaging are needed.
+First, breast cancer in Korea is the most common cancer among women, and the number of breast cancer patients has more than doubled over the past decade. It is among the highest incidence groups among Asian countries. Therefore, the importance of diagnosing and treating breast cancer is increasing. Second, many kinds of CNN models exist, but studies on which models are suitable for medical imaging are needed.
 
 ## CNN Models
 
- The CNN model, short for Convolutional Neural Network, is used when there is a large amount of complex data such as image data because operations are repeated for hundreds of layers. The CNN model can visually detect the presence or absence of cancer cells in images by reviewing thousands of data, or can be used in audio processing, object detection, synthetic data generation, and various fields. To this end, a pre-trained model or a model built by learning and testing a new model is used. We used three kind of CNN models in this project.
+ The CNN model, short for Convolutional Neural Network, is used when there is a large amount of complex data such as image data because operations are repeated for hundreds of layers. The CNN model can visually detect the presence or absence of cancer cells in images by reviewing thousands of data or can be used in audio processing, object detection, synthetic data generation, and various fields. To this end, a pre-trained model built by learning and testing a new model is used. We used three kinds of CNN models in this project.
 
 ### Yolo
 
 : You Look Only Once
 
- YOLOv8 provides the latest performance in terms of accuracy and speed when detecting and segmenting objects. With one stage detection method, YOLO can detect objects in real time by simultaneously performing classification and localization. There are few background errors because it learns the surrounding information and processes the entire image. As its name implies, the entire image is viewed only once. This means that it does not do the work of analyzing multiple images by dividing them into multiple sheets like the R-CNN-based method.
+ YOLOv8 provides the latest performance in terms of accuracy and speed when detecting and segmenting objects. With one stage detection method, YOLO can detect objects in real-time by simultaneously performing classification and localization. There are few background errors because it learns the surrounding information and processes the entire image. As its name implies, the entire image is viewed only once. This means that it does not do the work of analyzing multiple images by dividing them into multiple sheets like the R-CNN-based method.
 
 **Architecture**
 
-![Figure 1. Yolo architecture](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/Untitled.png)
+![1 Yolo](https://github.com/eunjijuliako/DLIP/assets/164735460/3f9f5678-3daa-4e63-8c24-07558d60f231)
 
 Figure 1. Yolo architecture
 
 - Resizes the input image into 448x448 before going through the convolutional network.
-- A 1x1 convolution is first applied to reduce the number of channels, which is then followed by a 3x3 convolution to generate a cuboidal output.
+- A 1x1 convolution is first applied to reduce the number of channels, followed by a 3x3 convolution to generate a cuboidal output.
 - The activation function under the hood is ReLU, except for the final layer, which uses a linear activation function.
 - Some additional techniques, such as batch normalization and dropout, respectively regularize the model and prevent it from overfitting.
 
@@ -52,7 +52,7 @@ Figure 1. Yolo architecture
 
 **Architecture**
 
-![Figure 2. UNet architecture](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/Untitled%201.png)
+![2 UNet](https://github.com/eunjijuliako/DLIP/assets/164735460/b17a95f9-d68a-4ceb-bbd6-5f3653efe031)
 
 Figure 2. UNet architecture
 
@@ -62,18 +62,18 @@ Figure 2. UNet architecture
     
 - Data Augmentation
     
-    Elastic Deformation is a way of transforming pixel to randomly twist in different directions. If you look at the figure above, you can see that even elastic deformation transforms to be as real as it is in the real world. The authors used these techniques to increase data in the article.
+    Elastic Deformation is a way of transforming pixels to randomly twist in different directions. If you look at the figure above, you can see that even elastic deformation transforms to be as real as it is in the real world. The authors used these techniques to increase data in the article.
     
 
 ### FCN
 
 : Fully Connected Networks for Semantic Segmentation
 
- FCN is a model modified to perform semantic segmentation tasks using existing networks AlexNet, VGGNet, and GoogleNet whose performance has been verified in segmentation. In the existing network structure, a fully connected layer is inserted at the end, and in order to use this FCL, only a fixed size of input must be received, and after passing FCL, location information disappears. It is not suitable for image segmentation because segmentation requires location information (where an object exists). To overcome the disadvantages, FCN was created to replace the last FCL of the model used in segmentation with a convolution layer. When FCN is used, location information or class information is not lost and input size is not limited.
+ FCN is a model modified to perform semantic segmentation tasks using existing networks AlexNet, VGGNet, and GoogleNet whose performance has been verified in segmentation. In the existing network structure, a fully connected layer is inserted at the end, and in order to use this FCL, only a fixed size of input must be received, and after passing the FCL, location information disappears. It is not suitable for image segmentation because segmentation requires location information (where an object exists). To overcome the disadvantages, FCN was created to replace the last FCL of the model used in segmentation with a convolution layer. When FCN is used, location information or class information is not lost and input size is not limited.
 
 **Architecture**
 
-![Figure 3. FCN architecture](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/3_FCN.png)
+![3 FCN](https://github.com/eunjijuliako/DLIP/assets/164735460/a6da1efd-20df-4a6b-acc7-fb2e73a1dab9)
 
 Figure 3. FCN architecture
 
@@ -84,7 +84,7 @@ Figure 3. FCN architecture
 
 ## Objective
 
-In this project, we will find which CNN model is appropriate to diagnose or classify breast cancer through comparing the precision, recall, and accuracy for each models, which is yolo, UNet, and FCN.
+In this project, we will find which CNN model is appropriate to diagnose or classify breast cancer through comparing the precision, recall, and accuracy of each models, which is Yolo, UNet, and FCN.
 
 ## Preparation
 
@@ -103,11 +103,11 @@ In this project, we will find which CNN model is appropriate to diagnose or clas
 
 ## Flowchart
 
-![Figure 4. Flow chart](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/4_Flow_chart.png)
+<img width="860" alt="4 Flow chart" src="https://github.com/eunjijuliako/DLIP/assets/164735460/1624c7c7-91b7-446b-be96-a60bb4bff7bb">
 
 Figure 4. Flow chart
 
-1. CNN models: Train the three CNN models with same dataset
+1. CNN models: Train the three CNN models with the same dataset
 2. Presence of Cancer: Depending on the class, there is no cancer when class is 0, and there is cancer when class is 1. 
 3. Cancer Stage: Depending on the roundness and the size of range, we can determine the stage of cancer. This is post-processing.
 
@@ -115,9 +115,9 @@ Figure 4. Flow chart
 
 ### 1. Prepare the Data set
 
-1. **Download the Images from Dataset link**
+1. **Download the Images from the Dataset link**
     
-    ![Figure 5. Data set](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/5_dataset.png)
+<img width="1018" alt="5 dataset" src="https://github.com/eunjijuliako/DLIP/assets/164735460/538ade58-8b39-4afe-adc9-3293357d9173">
     
     Figure 5. Data set
     
@@ -130,7 +130,7 @@ Figure 4. Flow chart
         ```
         
     
-    We used the segmentation version 8n provided by ultralytics for the Yolo model. 
+    We used the segmentation version 8n provided by Ultralytics for the Yolo model. 
     
     - UNet
         
@@ -386,7 +386,7 @@ Colors were assigned to distinguish each class. Additionally, the classes were d
 
 If the mask was close to a circle, it was classified as benign. If the mask had a jagged shape, it was classified as malignant. 
 
-Further post-processing was performed for those classified as malignant. The stages were divided based on size, ranging from 1 to 4 from smallest to largest. This allows for the diagnosis of cancer and classification of cancer types and progression stages based on characteristics. The Yolo model was used without any post-processing.
+Further post-processing was performed for those classified as malignant. The stages were divided based on size, ranging from 1 to 4 from smallest to largest. This allows for the diagnosis of cancer and the classification of cancer types and progression stages based on characteristics. The Yolo model was used without any post-processing.
 
 ### 4. Test & Evaluation
 
@@ -447,7 +447,7 @@ print(f'Recall: {recall:.2f}')
 print(f'Accuracy: {accuracy:.2f}')
 ```
 
-1. **Post-processign Algorithm Evaluation**
+1. **Post-processing Algorithm Evaluation**
 
 ```python
 def determine_class(mask):
@@ -598,15 +598,15 @@ The final evaluation was for segmentation. This was done because we used segment
 
 1. **Binary classification Evaluation - Presence of cancer**
     
-    ![Figure 6. Yolo predicted mask result](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/6_Yolo_Predicted_mask.png)
+![6 Yolo Predicted mask](https://github.com/eunjijuliako/DLIP/assets/164735460/94174287-7715-4ba2-9c6b-6fc3a0fe5e60)
     
     Figure 6. Yolo predicted mask result
     
-    ![Figure 7. UNet predicted mask result](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/7_UNet_Predicted_mask.png)
+![7 UNet Predicted mask](https://github.com/eunjijuliako/DLIP/assets/164735460/ede14f4f-4b06-46c7-9fab-9ad9e9256706)
     
     Figure 7. UNet predicted mask result
     
-    ![Figure 8. FCN predicted mask result](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/8_FCN_Preicted_mask.png)
+![8 FCN Preicted mask](https://github.com/eunjijuliako/DLIP/assets/164735460/dbe38834-2d53-4def-818e-057158b3b73c)
     
     Figure 8. FCN predicted mask result
     
@@ -620,7 +620,7 @@ The final evaluation was for segmentation. This was done because we used segment
     
     YOLO can outperform UNet or FCN in breast cancer ultrasound imaging because it can capture both regional and global features well with a structure specialized for object detection and an efficient learning method. These features can also be effectively applied in classification tasks.
     
-    For classification tasks, a classification-optimized model may be better suited than a segmentation model. Since UNet was originally developed for segmentation, it is possible that FCN specialized for classification tasks performed better. In addition, UNet usually has more parameters and complexity, and can cause overfitting problems. If the dataset is not large enough or diverse enough, UNet may overfit and degrade performance in test data.
+    For classification tasks, a classification-optimized model may be better suited than a segmentation model. Since UNet was originally developed for segmentation, it is possible that FCN specialized for classification tasks performed better. In addition, UNet usually has more parameters and complexity and can cause overfitting problems. If the dataset is not large enough or diverse enough, UNet may overfit and degrade performance in test data.
     
 2. **Post-processing Algorithm Evaluation - Stage of cancer**
     
@@ -628,15 +628,15 @@ The final evaluation was for segmentation. This was done because we used segment
     
 3. **Segmentation Evaluation - Area of segmentation**
     
-    ![Figure 9. Yolo segmentation result](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/9_Yolo_classification.png)
+![9 Yolo classification](https://github.com/eunjijuliako/DLIP/assets/164735460/fbcdb005-b33c-475d-8bbe-04f4609a5737)
     
     Figure 9. Yolo segmentation result
     
-    ![Figure 10. UNet segmentation result](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/10_UNet_classification.png)
+![10 UNet classification](https://github.com/eunjijuliako/DLIP/assets/164735460/5f17fba1-d32b-46ed-b42a-90dc3912b99e)
     
     Figure 10. UNet segmentation result
     
-    ![Figure 11. FCN segmentation result](LAB%205%20Which%20CNN%20Model%20is%20Appropriate%20to%20Diagnose%20o%20dad067f3b83546e1bb7bccf1145cddca/11_FCN_classification.png)
+![11 FCN classification](https://github.com/eunjijuliako/DLIP/assets/164735460/abfacbaf-dc1a-41d8-a110-66224288ea0b)
     
     Figure 11. FCN segmentation result
     
@@ -653,7 +653,7 @@ The final evaluation was for segmentation. This was done because we used segment
 
 **Summary**
 
- Through this project, we wanted to find out which of the various CNN models do well in classification or segmentation when learning ultrasound images of breast cancer. Each of the three models has different ways of classifying and learningdata, and they have been found through investigations, testing, and analysis.
+ Through this project, we wanted to find out which of the various CNN models do well in classification or segmentation when learning ultrasound images of breast cancer. Each of the three models has different ways of classifying and learning data, and they have been found through investigations, testing, and analysis.
 
 We expected UNet to show higher accuracy than FCN, but FCN performed better than UNet in both classification and segmentation. We predicted that there was an overfitting problem in the UNet learning process because we conducted learning and testing with little data.
 
